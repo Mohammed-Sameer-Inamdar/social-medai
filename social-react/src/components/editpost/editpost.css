@@ -1,7 +1,0 @@
-.container {
-    @apply w-full h-full flex flex-col justify-center items-center
-}
-
-.edit-post-card {
-    @apply w-2/6 p-5 bg-white border border-gray-200 shadow rounded-lg mt-2
-}

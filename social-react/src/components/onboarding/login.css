@@ -1,5 +1,0 @@
-.container {
-    @apply flex min-h-full flex-col justify-center px-6 py-12 items-center
-}
-
-.offScreen {}
