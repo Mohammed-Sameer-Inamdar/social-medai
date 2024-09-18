@@ -1,0 +1,7 @@
+20240901	19:07:36	TypeError: Cannot read properties of undefined (reading 'startsWith')
+20240901	19:07:43	TypeError: Cannot read properties of undefined (reading 'startsWith')
+20240917	00:18:02	TypeError: res.status is not a function
+20240917	00:18:13	TypeError: res.status is not a function
+20240917	00:18:27	TypeError: res.status is not a function
+20240917	00:18:27	TypeError: res.status is not a function
+20240917	00:26:36	TypeError: Cannot read properties of undefined (reading 'username')
