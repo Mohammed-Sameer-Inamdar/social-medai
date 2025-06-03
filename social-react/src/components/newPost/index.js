@@ -65,7 +65,7 @@ function NewPost() {
                     required
                 />
 
-                <button type='submit'> Saveś</button>
+                <button type='submit'> Saves</button>
             </form>
         </section>
     )

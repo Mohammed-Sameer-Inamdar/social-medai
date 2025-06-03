@@ -6,13 +6,16 @@ import { useGetPostsQuery } from "../../slices/postSlice";
 
 const PostDetails = () => {
     const { postId } = useParams();
-    const { post, isLoading,refetch } = useGetPostsQuery('getPosts', {
-        refetchOnMountOrArgChange: true,
-        skip: false,
-        selectFromResult: ({ data }) => ({
-            post: data?.entities[postId],
-        })
-    })
+
+    const { post, isLoading, refetch } = useGetPostById(postId);
+    
+    // const { post, isLoading,refetch } = useGetPostsQuery('getPosts', {
+    //     refetchOnMountOrArgChange: true,
+    //     skip: false,
+    //     selectFromResult: ({ data }) => ({
+    //         post: data?.entities[postId],
+    //     })
+    // })
     if (isLoading) return <p>Loading...</p>
     if (!post) return <p>No post found</p>
 

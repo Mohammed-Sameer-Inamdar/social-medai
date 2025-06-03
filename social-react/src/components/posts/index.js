@@ -2,20 +2,23 @@ import React, { useEffect } from 'react'
 import { useGetPostsQuery } from '../../slices/postSlice';
 import './postlist.css'
 import PostExcerpt from './component/PostExcerpt'
+import { useGetPosts } from '../../slices/postGraphql';
 
 const Posts = () => {
 
-    const { data: posts, isError, error, refetch } = useGetPostsQuery('getposts');
-    const { data: newestPost } = useGetPostsQuery({
-        refetchOnMountOrArgChange: true,
-        skip: false
-    });
+    const { loading, error, data: posts } = useGetPosts();
 
-    useEffect(() => {
-        if (newestPost) {
-            refetch();
-        }
-    }, [newestPost, refetch]);
+    // const { data: posts, isError, error, refetch } = useGetPostsQuery('getposts');
+    // const { data: newestPost } = useGetPostsQuery({
+    //     refetchOnMountOrArgChange: true,
+    //     skip: false
+    // });
+
+    // useEffect(() => {
+    //     if (newestPost) {
+    //         refetch();
+    //     }
+    // }, [newestPost, refetch]);
 
     let content;
 
@@ -32,7 +35,7 @@ const Posts = () => {
             </div>
         )
     }
-    if (isError) {
+    if (error) {
         return <div className='container'>
             <button className='btn btn-primary' onClick={() => handleRefresh()}>Refresh</button>
             <p>{error}</p>
