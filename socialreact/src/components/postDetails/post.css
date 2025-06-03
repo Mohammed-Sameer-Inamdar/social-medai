@@ -1,0 +1,11 @@
+.postContainer {
+    @apply w-full flex flex-col justify-center items-center mt-2
+}
+
+.post-item {
+    @apply p-5 w-2/6 bg-white border border-gray-200 rounded-lg shadow;
+}
+
+.postCredit {
+    @apply flex flex-row items-center justify-between
+}
